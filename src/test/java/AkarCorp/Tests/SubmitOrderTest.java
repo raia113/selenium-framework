@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import AkarCorp.PageObjects.CartPage;
 import AkarCorp.PageObjects.CheckOutPage;
 import AkarCorp.PageObjects.ConfirmationPage;
-import AkarCorp.PageObjects.OrderPage;
 import AkarCorp.PageObjects.ProductCatalog;
 import AkarCorp.TestComponents.BaseTest;
 

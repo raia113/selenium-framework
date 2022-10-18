@@ -6,12 +6,9 @@
 			<include name="ErrorHandling" /> <!-- Make sure to update beforeMethod and AfterMethod -->
 		</run>
 	</groups>
-	<test thread-count="5" name="Submit Order Test">
-		<classes>
-			<class name="AkarCorp.Tests.SubmitOrderTest" />
-		</classes>
-	</test> <!-- Test -->
-
+<listeners>
+<listener class-name="AkarCorp.TestComponents.Listeners"></listener>
+</listeners>
 	<test thread-count="5" name="ErrorValidation">
 		<classes>
 			<class name="AkarCorp.Tests.ErrorValidationTest" />

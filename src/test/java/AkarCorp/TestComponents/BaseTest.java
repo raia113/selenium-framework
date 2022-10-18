@@ -33,8 +33,10 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\AkarCorp\\Resources\\GlobalData.properties");
 		prop.load(fis);
+		//check if browser is passed through maven or through system property
+		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
 
-		String browserName = prop.getProperty("browser");
+		//String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
