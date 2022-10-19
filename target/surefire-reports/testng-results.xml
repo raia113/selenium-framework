@@ -1,108 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-17T19:57:26 EDT" name="Suite" finished-at="2022-10-17T19:57:52 EDT" duration-ms="25565">
+  <suite started-at="2022-10-19T15:36:11 EDT" name="Suite" finished-at="2022-10-19T15:36:37 EDT" duration-ms="26352">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="ErrorValidationTest.errorValidationLogin()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" name="errorValidationLogin" class="AkarCorp.Tests.ErrorValidationTest"/>
-        <method signature="ErrorValidationTest.errorValidationSubmitOrder()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" name="errorValidationSubmitOrder" class="AkarCorp.Tests.ErrorValidationTest"/>
-      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" name="orderSubmit" class="AkarCorp.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" name="orderHistoryVerify" class="AkarCorp.Tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2022-10-17T19:57:26 EDT" name="ErrorValidation" finished-at="2022-10-17T19:57:52 EDT" duration-ms="25565">
-      <class name="AkarCorp.Tests.ErrorValidationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:27 EDT" name="launchApplication" finished-at="2022-10-17T19:57:39 EDT" duration-ms="12859" status="PASS">
+    <test started-at="2022-10-19T15:36:11 EDT" name="Submit Order Test" finished-at="2022-10-19T15:36:37 EDT" duration-ms="26352">
+      <class name="AkarCorp.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:11 EDT" name="launchApplication" finished-at="2022-10-19T15:36:16 EDT" duration-ms="4994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="errorValidationLogin()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:39 EDT" name="errorValidationLogin" finished-at="2022-10-17T19:57:40 EDT" duration-ms="880" status="PASS">
+        <test-method signature="orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:16 EDT" name="orderSubmit" data-provider="getDataForSubmitOrder" finished-at="2022-10-19T15:36:20 EDT" duration-ms="3855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=P@trick1, product=ZARA COAT 3, email=patrickbateman@email.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- errorValidationLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:40 EDT" name="tearDown" finished-at="2022-10-17T19:57:41 EDT" duration-ms="1103" status="PASS">
+        </test-method> <!-- orderSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:20 EDT" name="tearDown" finished-at="2022-10-19T15:36:20 EDT" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:41 EDT" name="launchApplication" finished-at="2022-10-17T19:57:49 EDT" duration-ms="7284" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:20 EDT" name="launchApplication" finished-at="2022-10-19T15:36:24 EDT" duration-ms="3644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="errorValidationSubmitOrder()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:49 EDT" name="errorValidationSubmitOrder" finished-at="2022-10-17T19:57:51 EDT" duration-ms="2254" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[Element <button class="btn btn-custom"> is not clickable at point (1041,27) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating"> obscures it
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-CATJNUB', ip: '192.168.2.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5cdb7be1-4308-4f61-ab91-0ea0c6d6f113, clickElement {id=3ca68204-5438-4601-9dc0-2658e9ba8095}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 105.0.3, moz:accessibilityChecks: false, moz:buildID: 20221007134813, moz:debuggerAddress: 127.0.0.1:65523, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 26016, moz:profile: C:\Users\aayus\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:65523/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (5cdb7be1-4308-4f61-ab91-0ea0c6d6f113)] -> css selector: [routerLink*='cart']]
-Session ID: 5cdb7be1-4308-4f61-ab91-0ea0c6d6f113]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <button class="btn btn-custom"> is not clickable at point (1041,27) because another element <div class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating"> obscures it
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'DESKTOP-CATJNUB', ip: '192.168.2.68', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5cdb7be1-4308-4f61-ab91-0ea0c6d6f113, clickElement {id=3ca68204-5438-4601-9dc0-2658e9ba8095}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 105.0.3, moz:accessibilityChecks: false, moz:buildID: 20221007134813, moz:debuggerAddress: 127.0.0.1:65523, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 26016, moz:profile: C:\Users\aayus\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:65523/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on WINDOWS (5cdb7be1-4308-4f61-ab91-0ea0c6d6f113)] -> css selector: [routerLink*='cart']]
-Session ID: 5cdb7be1-4308-4f61-ab91-0ea0c6d6f113
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at AkarCorp.PageObjects.BasePage.goToCartPage(BasePage.java:43)
-at AkarCorp.Tests.ErrorValidationTest.errorValidationSubmitOrder(ErrorValidationTest.java:29)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:24 EDT" name="orderSubmit" data-provider="getDataForSubmitOrder" finished-at="2022-10-19T15:36:28 EDT" duration-ms="3809" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=P@ul@llen1, product=ADIDAS ORIGINAL, email=paulallen@email.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- errorValidationSubmitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.ErrorValidationTest@5890e879]" started-at="2022-10-17T19:57:51 EDT" name="tearDown" finished-at="2022-10-17T19:57:52 EDT" duration-ms="855" status="PASS">
+        </test-method> <!-- orderSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:28 EDT" name="tearDown" finished-at="2022-10-19T15:36:28 EDT" duration-ms="159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- AkarCorp.Tests.ErrorValidationTest -->
-    </test> <!-- ErrorValidation -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:28 EDT" name="launchApplication" finished-at="2022-10-19T15:36:31 EDT" duration-ms="3666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:31 EDT" name="orderHistoryVerify" data-provider="getDataForVerifyOrder" finished-at="2022-10-19T15:36:32 EDT" depends-on-methods="AkarCorp.Tests.SubmitOrderTest.orderSubmit" duration-ms="932" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[patrickbateman@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P@trick1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZARA COAT 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:32 EDT" name="tearDown" finished-at="2022-10-19T15:36:32 EDT" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:32 EDT" name="launchApplication" finished-at="2022-10-19T15:36:36 EDT" duration-ms="3816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:36 EDT" name="orderHistoryVerify" data-provider="getDataForVerifyOrder" finished-at="2022-10-19T15:36:37 EDT" depends-on-methods="AkarCorp.Tests.SubmitOrderTest.orderSubmit" duration-ms="820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[paulallen@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P@ul@llen1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@7c37508a]" started-at="2022-10-19T15:36:37 EDT" name="tearDown" finished-at="2022-10-19T15:36:37 EDT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AkarCorp.Tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
   </suite> <!-- Suite -->
 </testng-results>

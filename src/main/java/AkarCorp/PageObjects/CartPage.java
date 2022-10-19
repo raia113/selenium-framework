@@ -24,6 +24,7 @@ public class CartPage extends BasePage {
 	WebElement checkOut;
 
 	By checkOutButton = By.xpath("(//button[@class='btn btn-primary'])[3]");
+	
 
 	public Boolean VerifiyProductPresent(String productName) {
 		Boolean isPresent = cartItem.stream().anyMatch(x -> x.getText().equalsIgnoreCase(productName));

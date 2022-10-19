@@ -34,12 +34,15 @@ public class BasePage {
 	
 	@FindBy(css =".fa.fa-sign-out")
 	WebElement signOutPage;
+	
+	By cartPageNav = By.cssSelector("[routerLink*='cart']");
 		
 
 	/** Page Navigation **/
 
 	
 	public CartPage goToCartPage() {
+		waitForElementToBeClickable(cartPageNav);
 		cartPage.click();
 		CartPage cartPage = new CartPage(driver);
 		return cartPage;
