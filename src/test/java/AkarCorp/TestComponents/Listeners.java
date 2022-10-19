@@ -54,7 +54,14 @@ public class Listeners extends BaseTest implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
-		ITestListener.super.onTestSkipped(result);
+		extentTest.get().log(Status.SKIP, "Test Skipped");
+		extentTest.get().fail(result.getThrowable());
+		
+		try {
+			driver= (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+		} catch (Exception e1) { //catching generic exception
+			e1.printStackTrace();
+		} 
 	}
 
 	@Override

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-19T12:34:31 EDT" name="Suite" finished-at="2022-10-19T12:35:51 EDT" duration-ms="79407">
+    <groups>
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" name="orderSubmit" class="AkarCorp.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" name="orderHistoryVerify" class="AkarCorp.Tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2022-10-19T12:34:31 EDT" name="Submit Order Test" finished-at="2022-10-19T12:35:51 EDT" duration-ms="79407">
+      <class name="AkarCorp.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:34:31 EDT" name="launchApplication" finished-at="2022-10-19T12:34:44 EDT" duration-ms="12543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:34:44 EDT" name="orderSubmit" data-provider="getDataForSubmitOrder" finished-at="2022-10-19T12:34:49 EDT" duration-ms="4711" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=P@trick1, product=ZARA COAT 3, email=patrickbateman@email.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:34:49 EDT" name="tearDown" finished-at="2022-10-19T12:34:49 EDT" duration-ms="633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:34:49 EDT" name="launchApplication" finished-at="2022-10-19T12:34:55 EDT" duration-ms="5907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderSubmit(java.util.HashMap)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:34:55 EDT" name="orderSubmit" data-provider="getDataForSubmitOrder" finished-at="2022-10-19T12:35:02 EDT" duration-ms="6423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=P@ul@llen1, product=ADIDAS ORIGINAL, email=paulallen@email.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:02 EDT" name="tearDown" finished-at="2022-10-19T12:35:02 EDT" duration-ms="667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:02 EDT" name="launchApplication" finished-at="2022-10-19T12:35:25 EDT" duration-ms="22559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:25 EDT" name="orderHistoryVerify" data-provider="getDataForVerifyOrder" finished-at="2022-10-19T12:35:26 EDT" depends-on-methods="AkarCorp.Tests.SubmitOrderTest.orderSubmit" duration-ms="1450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[patrickbateman@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P@trick1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZARA COAT 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:26 EDT" name="tearDown" finished-at="2022-10-19T12:35:27 EDT" duration-ms="544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:27 EDT" name="launchApplication" finished-at="2022-10-19T12:35:48 EDT" duration-ms="20885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderHistoryVerify(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:48 EDT" name="orderHistoryVerify" data-provider="getDataForVerifyOrder" finished-at="2022-10-19T12:35:50 EDT" depends-on-methods="AkarCorp.Tests.SubmitOrderTest.orderSubmit" duration-ms="2264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[paulallen@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P@ul@llen1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryVerify -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AkarCorp.Tests.SubmitOrderTest@ab7395e]" started-at="2022-10-19T12:35:50 EDT" name="tearDown" finished-at="2022-10-19T12:35:51 EDT" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AkarCorp.Tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
+</testng-results>
